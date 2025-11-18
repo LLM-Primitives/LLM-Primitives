@@ -48,7 +48,7 @@
           <span>arXiv</span>
         </a>
       </span>
-      <!-- Code Link. -->
+      <!-- Code Link.
       <span class="link-block">
         <a href="https://llm-primitives.github.io/LLM-Primitives/"
            class="external-link button is-normal is-rounded is-dark">
@@ -57,6 +57,15 @@
           </span>
           <span>Code</span>
           </a>
+      </span> -->
+      <span class="link-block">
+        <a href="#" id="dataset-button"
+          class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+              <i class="fas fa-database"></i>
+          </span>
+          <span>Dataset</span>
+        </a>
       </span>
     </div>
   </div>
@@ -301,6 +310,46 @@
 <br>
 <br>
 <br>
+
+<div id="dataset-modal" class="custom-modal-backdrop" style="display: none;">
+    <div class="custom-modal-content">
+        <h2 class="title is-4" style="text-align: center;">Dataset Request</h2>
+        <form id="contactForm">
+            <div class="custom-form-group">
+                <label for="modal-name">Name</label>
+                <input type="text" id="modal-name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="custom-form-group">
+                <label for="modal-email">Email</label>
+                <input type="email" id="modal-email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="custom-form-group">
+                <label for="modal-unit">Unit/Organization</label>
+                <input type="text" id="modal-unit" name="unit" required placeholder="Your University/Company">
+            </div>
+            <div class="custom-form-group">
+                <label for="modal-reason">Reason for Request</label>
+                <textarea id="modal-reason" name="reason" rows="3" required placeholder="Briefly state your purpose"></textarea>
+            </div>
+            <input type="hidden" name="subject" value="New Dataset Request for LLM-Primitives">
+            <button type="submit" id="submit-button" class="submit-button is-success">Send Request</button>
+            <button type="button" id="close-modal" class="submit-button is-light">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "aqOjBZ40EUwbgp4es", // 您的 EmailJS 公钥
+        });
+    })();
+</script>
+<script type="text/javascript" src="static/js/emailscript.js"></script>
+
+</body>
+</html>
 
 </body>
 </html>
