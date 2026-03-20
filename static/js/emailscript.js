@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(templateParams)
         
         // 使用 EmailJS 发送邮件
-        emailjs.send('service_y32rm7a', 'template_mq40w1s', templateParams) 
+        emailjs.send('service_pew7oca', 'template_mq40w1s', templateParams)
             .then(
                 () => {
                     alert('Your Dataset request has been submitted successfully! We will get back to you as soon as possible.');
